@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, "Segoe UI", Roboto, system-ui, sans-serif;
+  color: #e5f1e9;
+  background: #07130f;
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #07130f;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+}
+
+h1, h2, h3 {
+  color: #ecf7ef;
+}
+
+button, input {
+  font: inherit;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Keep existing screens on the same dark forest palette. */
+[class~="bg-white"] { background-color: #10241b !important; }
+[class~="bg-white/70"] { background-color: #10241bbd !important; }
+[class~="bg-slate-50"] { background-color: #0c1c15 !important; }
+[class~="bg-slate-100"] { background-color: #14291f !important; }
+[class~="bg-slate-200"] { background-color: #1b3528 !important; }
+[class~="bg-sky-50"] { background-color: #0c1c15 !important; }
+[class~="bg-sky-100"] { background-color: #14291f !important; }
+[class~="border-sky-200"] { border-color: #284536 !important; }
+[class~="shadow-sky-100"] { --tw-shadow-color: #0005 !important; }
+[class~="text-slate-900"], [class~="text-slate-800"] { color: #e5f1e9 !important; }
+[class~="text-slate-700"], [class~="text-slate-600"] { color: #b9cfc1 !important; }
+[class~="text-slate-500"], [class~="text-slate-400"] { color: #8ba797 !important; }
+[class~="border-slate-100"], [class~="border-slate-200"] { border-color: #284536 !important; }
+[class~="bg-blue-900"], [class~="bg-blue-800"] { background-color: #17613f !important; }
+[class~="bg-blue-50"], [class~="bg-blue-100"] { background-color: #153a29 !important; }
+[class~="text-blue-900"], [class~="text-blue-800"], [class~="text-blue-700"] { color: #8dd3a8 !important; }
+[class~="border-blue-100"], [class~="border-blue-200"], [class~="border-blue-700"] { border-color: #286744 !important; }
+[class~="hover:bg-blue-50"]:hover, [class~="hover:bg-blue-800"]:hover { background-color: #1c7049 !important; }
+[class~="bg-red-50"] { background-color: #341d1a !important; }
+[class~="border-red-100"], [class~="border-red-200"] { border-color: #74413a !important; }
+
+.account-page {
+  min-height: 100vh;
+  padding: 0 24px 72px;
+  background: radial-gradient(ellipse at 50% -24%, #17442d 0%, #0a1912 54%, #07130f 100%);
+}
+
+.account-shell { width: min(920px, 100%); margin: 0 auto; }
+.account-topbar {
+  min-height: 84px; display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; border-bottom: 1px solid #254233;
+}
+.account-brand { display: inline-flex; align-items: center; gap: 11px; color: #edf8f0; text-decoration: none; font-size: 19px; font-weight: 750; letter-spacing: -.4px; }
+.account-brand-mark { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 12px; background: #17613f; color: white; }
+.account-nav { display: flex; gap: 24px; }
+.account-nav a, .profile-footer a { color: #9cdbb1; text-decoration: none; font-size: 14px; font-weight: 650; }
+.account-nav a:hover, .profile-footer a:hover { color: #d4f1dd; }
+.account-heading { padding: 48px 0 26px; }
+.account-eyebrow { margin-bottom: 9px; color: #78c894; font-size: 11px; font-weight: 800; letter-spacing: .17em; }
+.account-heading h1 { margin: 0; font-size: clamp(30px, 5vw, 40px); letter-spacing: -.04em; }
+.account-heading > p:last-child { margin: 10px 0 0; color: #9aafa1; font-size: 15px; }
+.profile-card, .history-card, .history-empty { overflow: hidden; border: 1px solid #294635; border-radius: 20px; background: #10241b; box-shadow: 0 20px 50px #0003; }
+.profile-banner { display: flex; align-items: center; gap: 20px; padding: 30px; background: linear-gradient(115deg, #174a31, #123523 62%, #10271d); }
+.profile-avatar { display: grid; width: 72px; height: 72px; flex: 0 0 auto; place-items: center; border: 1px solid #72b98b80; border-radius: 50%; background: #a2dbb61a; color: #c3f0d0; font-size: 23px; font-weight: 800; }
+.profile-role { margin: 0 0 4px; color: #a1dcb2; font-size: 11px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.profile-banner h2 { margin: 0; font-size: 23px; }
+.profile-banner p:last-child { margin: 5px 0 0; color: #b2cabc; font-size: 14px; }
+.profile-details { padding: 28px 30px; }
+.profile-details h3 { margin: 0 0 17px; font-size: 16px; }
+.profile-details dl { margin: 0; }
+.profile-detail { display: flex; justify-content: space-between; gap: 20px; padding: 16px 0; border-top: 1px solid #233d2e; }
+.profile-detail dt { color: #91a999; font-size: 14px; }
+.profile-detail dd { margin: 0; color: #e1eee5; font-size: 14px; font-weight: 650; text-align: right; overflow-wrap: anywhere; }
+.profile-footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 30px; border-top: 1px solid #233d2e; color: #9aafa1; font-size: 13px; }
+.history-list { display: grid; gap: 16px; }
+.history-card { padding: 22px 24px; }
+.history-card-top { display: flex; justify-content: space-between; align-items: center; gap: 14px; color: #95aa9b; font-size: 13px; }
+.history-status { padding: 6px 10px; border-radius: 999px; background: #1c4931; color: #a6e5ba; font-size: 11px; font-weight: 800; text-transform: capitalize; }
+.status-cancelled { background: #482721; color: #f2b8a9; }
+.history-route { display: flex; gap: 15px; padding: 22px 0; }
+.history-route-markers { display: flex; flex-direction: column; align-items: center; padding: 5px 0; }
+.pickup-marker, .drop-marker { width: 10px; height: 10px; border: 2px solid #a1e0b4; border-radius: 50%; }
+.drop-marker { border-color: #e0a78a; border-radius: 3px; }
+.route-line { width: 1px; min-height: 28px; flex: 1; background: #476b54; }
+.history-stops { display: grid; flex: 1; gap: 14px; min-width: 0; }
+.history-stops div, .history-meta div { display: grid; gap: 4px; min-width: 0; }
+.history-stops span, .history-meta span { color: #82998a; font-size: 11px; }
+.history-stops strong { color: #e4efe7; font-size: 14px; font-weight: 600; overflow-wrap: anywhere; }
+.history-meta { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; padding-top: 17px; border-top: 1px solid #233d2e; }
+.history-meta strong { color: #d8e9dd; font-size: 13px; font-weight: 650; overflow-wrap: anywhere; }
+.history-empty { padding: 56px 24px; text-align: center; }
+.history-empty-icon { display: inline-grid; width: 54px; height: 54px; place-items: center; margin-bottom: 16px; border-radius: 17px; background: #1a3a28; color: #9fe0b3; font-size: 25px; }
+.history-empty h2 { margin: 0; font-size: 20px; }
+.history-empty p { margin: 9px auto 0; max-width: 390px; color: #96ac9d; font-size: 14px; line-height: 1.6; }
+.account-primary-button { display: inline-flex; margin-top: 23px; padding: 11px 17px; border-radius: 11px; background: #1b7148; color: white; text-decoration: none; font-size: 14px; font-weight: 700; }
+.history-alert { margin-bottom: 16px; padding: 14px 16px; border: 1px solid #74413a; border-radius: 12px; background: #341d1a; color: #ffc4b8; font-size: 14px; }
+
+@media (max-width: 580px) {
+  .account-page { padding: 0 16px 48px; }
+  .account-topbar { min-height: 72px; }
+  .account-nav { gap: 14px; }
+  .account-nav a { font-size: 12px; }
+  .account-heading { padding-top: 36px; }
+  .profile-banner, .profile-details { padding: 22px; }
+  .profile-avatar { width: 58px; height: 58px; }
+  .profile-banner h2 { font-size: 19px; }
+  .profile-footer { align-items: flex-start; flex-direction: column; padding: 17px 22px; }
+  .history-card { padding: 18px; }
+  .history-meta { gap: 8px; }
+  .history-meta strong { font-size: 12px; }
+}
